@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_综合</title>
+</head>
+<body>
+
+<!--
+  综合使用以下技术:
+  1. 页面指令:
+    v-model
+    @click
+    @keyup.enter
+    v-for / $index
+    v-text
+  2. Vue对象
+    初始化数据: data
+    事件处理函数: methods
+-->
+<div id="app">
+  <input type="text" v-model="message" @keyup.enter="add">
+  <ul>
+    <li v-for="todo in todos" v-text="todo.id+'++++'+todo.name" @></li>
+  </ul>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+var app=new Vue({
+  el:"#app",
+  data:{
+    message:"",
+    todos:[{id:1,name:"yushu"},{id:2,name:"elm"},{id:4,name:"yzx"}]
+  },
+  methods:function(){
+    return {
+
+    }
+  }
+})
+</script>
+</body>
+</html>
